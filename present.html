@@ -113,63 +113,70 @@
         </section>
 
 
-        <section class="bg-blue">
-         <div class="grid">
-           <div class="column">
-             <h3>Bingo</h3>
-             <p class="text-subtitle">
-             asdfasdfsubtitle
-               <h1>asdf</h1>
-             </p>
-             <p>asdfasdfaasdfasd fasdfasdf
-asdfasdfaasdfasd fasdfasdf
-asdfasdfaasdfasd fasdfasdf
-asdfasdfaasdfasd fasdfasdf
-asdfasdfaasdfasd fasdfasdf
-asdfasdfaasdfasd fasdfasdf
-             k</p>
-
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-90 aligncenter">
+            <h2><strong>VIM Languge - Motions</strong></h3>
+            <p class="text-intro">
+              A motion combines a location (noun) with a default verb of 'MoveTo'.
+              (<em>MoveTothis location</em>). Many motions can be prefixed with optional count to repeat
+              motion.
+            </p>
+            <ul class="flexblock">
+              <li><h2>h,j,k,l</h2>
+                Prev Char, Next Line, Prev Line, Next Char
+              </li>
+              <li>
+                <h2>3j</h2>
+                Go 3 Lines below (useful with :set relativenumber)
+              </li>
+              <li>
+                <h2>0</h2>
+                First char of line. 
+                <h2>^</h2>
+                First non-blank character of line
+              </li>
+              <li>
+                <h2>$</h2>
+                End of line
+                <h2>{count}|</h2>
+                To screen column {count} in current line
+              </li>
+              <li>
+                <h2>{count}f{char}</h2>
+                To {count}'th occurence of {char} looking forward
+                <h2>{count}F{char}</h2>
+                To {count}'th occurence of {char} looking backward
+              </li>
+              <li>
+                <h2>{count}t{char}</h2>
+                Till before {count}'th occurence of {char} looking forward
+                <h2>{count}T{char}</h2>
+                Till after {count}'th occurence of {char} looking backward
+              </li>
+            </ul>
+            
+          </div>
+          <!-- .end .wrap -->
         </section>
 
         <section>
-          <!--.wrap = container (width: 90%) -->
-          <div class="wrap size-80 aligncenter">
-            <h2><strong>VIM Languge and Grammar</strong></h3>
-            <p class="text-intro">
-              VIM has verbs, nouns and modifiers
-            </p>
-            <div class="bg-white shadow">
-              <ul class="flexblock reasons">
-                <li>
-                  <h2>Normal Mode</h2>
-                  <p>This is the 'normal' mode of VIM. This is used for issuing normal commands. 70% of code editing is navigation
-                    of one form or another. VI acknowledges this as reality. If you are in another mode, you can switch to this mode
-                    using <b>&lt;Esc&gt;</b>
-                  </p>
-                </li>
-                <li>
-                  <h2>Insert Mode</h2>
-                  <p>In this mode the text you type is inserted in the buffer. You switch to this mode by typing <b>i</b> key.</p>
-                </li>
-                <li>
-                  <h2>Visual Mode</h2>
-                  <p>A selection mode which behaves like normal mode but movement commands extend/shorten a selection area. Swich to This
-                    mode using <b>v</b>
-                  </p>
-                </li>
-                <li>
-                  <h2>Block Visual Mode</h2>
-                  <p>A selection mode which is used for <i>columnar block selection</i>. You switch to this mode using <b>CTRL-V</b>. This mode is fun! </p>
-                </li>
-                <li>
-                  <h2>Cmdline Mode</h2>
-                  <p>You enter labelled commands in the bottom of the window. You switch to this mode using <b>':'</b></p>
-                </li>
+          <div class="wrap">
+            <h1>Visual Mode</h1>
+            <p class="text-intro">Visually select piece of text that can be operated upon</p>
+            <div class="grid">
+              <ul class="column">
+                <li>Mark start of text with <b>v</b> (char select), <b>V</b> (line select) or <b>CTRL-V</b> (column-block-select)</li>
+                <li>Use any motion commands (h, j, k, l, w, e, W, E, B, f, /, text-objects, etc) to extend/reduce selection</li>
+                <li>Once desired selection is done, use operator command to execute operator on selection</li>
+                <li>Behaviour Inversion of normal mode:  Instead of normal mode's <em>Operation+Motion=Action</em> it is 
+                  <em>Selection+Operator=Action</em></li>
+              </ul>
+              <ul class="column">
+                <li>Tringo</li>
               </ul>
             </div>
-            <!-- .end .bg-white shadow -->
           </div>
-          <!-- .end .wrap -->
         </section>
         <section>
           <!--.wrap = container (width: 90%) -->
