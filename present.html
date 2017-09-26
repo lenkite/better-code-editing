@@ -93,18 +93,21 @@
                 </li>
                 <li>
                   <h2>Visual Mode</h2>
-                  <p>A selection mode which behaves like normal mode but movement commands extend/shorten a selection area. Swich to This
-                    mode using <b>v</b>
+                  <p>A selection mode which behaves like normal mode but movement commands extend/shorten a selection area. 
+                  <br />
+                  Press <b>v</b> for Char Visual Mode <br />
+                  Press <b>V</b> for Line Visual Mode <br />
+                  Press <b>CTRL-V</b> for Columnar Visual Mode
                   </p>
-                </li>
-                <li>
-                  <h2>Block Visual Mode</h2>
-                  <p>A selection mode which is used for <i>columnar block selection</i>. You switch to this mode using <b>CTRL-V</b>. This mode is fun! </p>
                 </li>
                 <li>
                   <h2>Cmdline Mode</h2>
                   <p>You enter labelled commands in the bottom of the window. You switch to this mode using <b>':'</b></p>
                 </li>
+                <!-- <li> -->
+                <!--   <h2>Variants of the Basic Modes</h2> -->
+                <!--   Operator-pending mode, replace-mode, insert normal mode, insert visual mode. -->
+                <!-- </li> -->
               </ul>
             </div>
             <!-- .end .bg-white shadow -->
@@ -115,13 +118,24 @@
 
         <section>
           <!--.wrap = container (width: 90%) -->
-          <div class="wrap size-90 aligncenter">
-            <h2><strong>VIM Languge - Motions</strong></h3>
-            <p class="text-intro">
-              A motion combines a location (noun) with a default verb of 'MoveTo'.
-              (<em>MoveTothis location</em>). Many motions can be prefixed with optional count to repeat
-              motion.
+          <div class="size-50">
+            <h2><strong>VIM Language Grammar</strong></h2>
+            <h6>motion &#8594 {count}? {motion command}</h6>
+            <p class="subtitle">
+            A motion comprises of a motion command prefixed by an optional count.
             </p>
+            <hr />
+            <h6>action &#8594 {register}? {operator command} {motion}</h6>
+            <p class="subtitle">
+            An edit action is generally <em>operator+motion</em> </br>
+            Ex: d3j deletes 3 lines downwards.
+            </p>
+
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
             <ul class="flexblock">
               <li><h2>h,j,k,l</h2>
                 Prev Char, Next Line, Prev Line, Next Char
@@ -155,9 +169,6 @@
                 Till after {count}'th occurence of {char} looking backward
               </li>
             </ul>
-            
-          </div>
-          <!-- .end .wrap -->
         </section>
 
         <section>
